@@ -12,8 +12,11 @@ public class Modelo {
     @Column(length = 20)
     private String descricao;
 
-    @OneToMany(mappedBy = "Automovel")
-    private List<Automovel> automovels;
+    /*@OneToMany(mappedBy = "Automovel")
+    private List<Automovel> automovels;*/
+
+    public Modelo() {
+    }
 
     public Modelo(int id) {
         this.id = id;

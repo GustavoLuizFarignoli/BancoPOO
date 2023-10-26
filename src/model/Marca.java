@@ -12,11 +12,10 @@ public class Marca {
     @Column(length = 20)
     private String descricao;
 
-    @OneToMany(mappedBy = "Automovel")
-    private List<Automovel> automovels;
+    /*@OneToMany(mappedBy = "Automovel")
+    private List<Automovel> automovels;*/
 
-    public Marca(int id) {
-        this.id = id;
+    public Marca() {
     }
 
     public Marca(String descricao) {

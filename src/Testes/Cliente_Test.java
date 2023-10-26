@@ -12,7 +12,7 @@ public class Cliente_Test {
         Cliente cliente = new Cliente("Joao", "joao@gmail.com", "2323232", "3443-4434");
 
         //Vai validar a conexao com o banco no arquivo persistence.xml
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("concessionariaPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("bibliotecaPU");
         EntityManager em = emf.createEntityManager();
 
         em.getTransaction().begin();

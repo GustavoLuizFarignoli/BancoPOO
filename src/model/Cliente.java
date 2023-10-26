@@ -23,6 +23,9 @@ public class Cliente {
         this.fone = fone;
     }
 
+    public Cliente() {
+    }
+
     public Cliente(int id) {
         this.id = id;
     }
