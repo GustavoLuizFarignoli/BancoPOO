@@ -1,2 +1,42 @@
-package model;public class Modelo {
+package model;
+
+import jakarta.persistence.*;
+
+import java.util.List;
+
+@Entity
+public class Modelo {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Column(length = 20)
+    private String descricao;
+
+    @OneToMany(mappedBy = "Automovel")
+    private List<Automovel> automovels;
+
+    public Modelo(int id) {
+        this.id = id;
+    }
+
+    public Modelo(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 }
+
