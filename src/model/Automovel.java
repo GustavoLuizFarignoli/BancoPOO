@@ -6,18 +6,18 @@ import jakarta.persistence.*;
 public class Automovel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "automovel_id")
     private int id;
     @Column(length = 4)
     private String ano;
     @Column(length = 17)
     private String chassi;
-    /*@ManyToOne
-    @JoinColumn(name = "marca_id")
+
+    @ManyToOne
     private String marca_id;
 
     @ManyToOne
-    @JoinColumn(name = "modelo_id")
-    private String modelo_id;*/
+    private String modelo_id;
 
     public Automovel() {
     }

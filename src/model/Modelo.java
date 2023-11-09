@@ -8,18 +8,18 @@ import java.util.List;
 public class Modelo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name = "modelo_id")
+    @OneToMany(mappedBy = "Modelo")
+    private int modelo_id;
     @Column(length = 20)
     private String descricao;
 
-    /*@OneToMany(mappedBy = "Automovel")
-    private List<Automovel> automovels;*/
 
     public Modelo() {
     }
 
     public Modelo(int id) {
-        this.id = id;
+        this.modelo_id = id;
     }
 
     public Modelo(String descricao) {
@@ -27,11 +27,11 @@ public class Modelo {
     }
 
     public int getId() {
-        return id;
+        return modelo_id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.modelo_id = id;
     }
 
     public String getDescricao() {

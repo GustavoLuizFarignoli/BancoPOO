@@ -8,12 +8,13 @@ import java.util.List;
 public class Marca {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "marca_id")
+    @OneToMany(mappedBy = "Marca")
     private int id;
+
     @Column(length = 20)
     private String descricao;
 
-    /*@OneToMany(mappedBy = "Automovel")
-    private List<Automovel> automovels;*/
 
     public Marca() {
     }
