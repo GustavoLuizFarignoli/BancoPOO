@@ -9,7 +9,7 @@ public class Marca {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "marca_id")
-    @OneToMany(mappedBy = "Marca")
+    @OneToMany(mappedBy = "Automovel")
     private int id;
 
     @Column(length = 20)

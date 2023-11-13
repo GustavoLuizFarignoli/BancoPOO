@@ -9,8 +9,8 @@ public class Modelo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "modelo_id")
-    @OneToMany(mappedBy = "Modelo")
-    private int modelo_id;
+    @OneToMany(mappedBy = "Automovel")
+    private int id;
     @Column(length = 20)
     private String descricao;
 
@@ -18,20 +18,12 @@ public class Modelo {
     public Modelo() {
     }
 
-    public Modelo(int id) {
-        this.modelo_id = id;
-    }
-
-    public Modelo(String descricao) {
-        this.descricao = descricao;
-    }
-
     public int getId() {
-        return modelo_id;
+        return id;
     }
 
     public void setId(int id) {
-        this.modelo_id = id;
+        this.id = id;
     }
 
     public String getDescricao() {

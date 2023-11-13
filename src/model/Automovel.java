@@ -14,10 +14,12 @@ public class Automovel {
     private String chassi;
 
     @ManyToOne
-    private String marca_id;
+    @JoinColumn(name = "marca_id")
+    private Marca marca;
 
     @ManyToOne
-    private String modelo_id;
+    @JoinColumn(name = "modelo_id")
+    private Modelo modelo;
 
     public Automovel() {
     }
@@ -49,5 +51,21 @@ public class Automovel {
 
     public void setChassi(String chassi) {
         this.chassi = chassi;
+    }
+
+    public Marca getMarca() {
+        return marca;
+    }
+
+    public void setMarca(Marca marca) {
+        this.marca = marca;
+    }
+
+    public Modelo getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(Modelo modelo) {
+        this.modelo = modelo;
     }
 }
